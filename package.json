@@ -1,0 +1,25 @@
+{
+  "name": "datfile",
+  "version": "1.0.0",
+  "description": "Webpage",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.31.2"
+  },
+  "scripts": {
+    "sass-watch": "sass --watch --poll src/scss:static/css",
+    "sass-build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/User-akash/DatFile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/User-akash/DatFile/issues"
+  },
+  "homepage": "https://github.com/User-akash/DatFile#readme"
+}
