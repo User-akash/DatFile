@@ -1,7 +1,12 @@
-@import "_variale_more";
+@import "./variable_more";
 
-//resete default padding and margin
+//reset default padding and margin
+
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    &:after,&::before{
+        box-sizing: border-box;
+    }
 }

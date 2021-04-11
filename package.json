@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "Webpage",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  },
   "devDependencies": {
     "babel-loader": "^8.2.2",
     "webpack": "^5.31.2"
   },
   "scripts": {
     "sass-watch": "sass --watch --poll src/scss:static/css",
-    "sass-build"
+    "sass-build": "sass --style=compressed src/scss:static/css"
   },
   "repository": {
     "type": "git",
