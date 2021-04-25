@@ -9,5 +9,8 @@
 </head>
 <body>
     <h1>Hello Akash</h1>
+    <input type="text" name="shadhin" id="id" class="foo">
+    <my-elemnt>my host</my-elemnt>
+    <script src="./static/js/tsc.js"></script>
 </body>
 </html>
