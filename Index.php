@@ -10,7 +10,7 @@
 <body>
     <div class="navbar">
         <a href="#" class="brand">
-            <!-- <img src="static\media\logo.svg" alt=""> -->
+            <!-- <img src="static/media/logo.svg" alt=""> -->
 
             
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -54,7 +54,7 @@
                 <line class="bottom"  stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="4.9" y1="50.9" x2="59.1" y2="50.9"/>
             </svg>
         </a>
-        <div class="menus open">
+        <div class="menus">
             <ul class="items">
                 <li class="item"><a href="#" class="item-link">Home</a></li>
                 <li class="item"><a href="#" class="item-link">Product</a></li>
@@ -66,14 +66,19 @@
     <div class="container">
         <div class="caption">
             <div class="cover">
-                <img src="./static/media/shadhin.jpg" alt="Shadhin" class="cover">
+                <img src="/static/media/img1.png" alt="shadhin" class="cover">
+            </div>
+            <div class="progresion">
+                <div class="spacial">
+                    <h3>what the hell are doing?</h3>
+                </div>
             </div>
             <div class="body">
                 <h2>The Modern City Need Action About Bussness</h2>
-                <button class="btn">Sign Up</button>
+                <a class="btn" href="/Singin.php">Sign Up</a>
             </div>
         </div>
     </div>
-    <script src="static\js\tsc.js"></script>
+    <script src="static/js/tsc.js"></script>
 </body>
 </html>

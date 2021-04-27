@@ -30,11 +30,15 @@ body{
     .menu-hub{
         margin-left: auto;
         padding: 8px;
+        z-index: auto;
+        &.open{
+            z-index: 1024;
+        }
     }
     .menus{
         position: fixed;
-        display:block;
-        background-color: transparentize($color: $backgroundColor, $amount: 0.3);
+        display:none;
+        background-color: transparentize($color: $backgroundColor, $amount: 0.1);
         backdrop-filter: blur(2px);
         width: 100vw;
         height: 100vh;
@@ -45,16 +49,35 @@ body{
                 display: flex;
                 flex-direction: column;
                 .item {
-                    display: inline;
+                    margin: 0.3rem 0rem;
                         a{
-                        width: 100%;
-                        padding: 8px;
-                        background-color: transparentize($color: $backgroundColor, $amount: 0.2);
-                        text-align: center;
+                            display: block;
+                            background-color: transparentize($color: $backgroundColor, $amount: 0.2);
+                            text-align: center;
+                            padding: 0.5rem 1rem;
+                            padding-left: 0px;
+                            padding-right: 0px;
+                            &:hover{
+                                background-color: darken($color: $primaryColor, $amount:30);
+                            }
                     }
                 }
             }
         }
+    
+    @keyframes slidein {
+        from{
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+        }
+        to{
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    &.open{
+        display: block;
+        animation: slidein 0.3s;
+    }
     }
 }
 a{
@@ -79,6 +102,55 @@ a{
             }
         }
     }
+    &.sign{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        .card{
+            .card-head{
+                border-bottom: 1px solid $primaryColor;
+                padding: 8px 2px;
+                background-color: lighten($color: $backgroundColor, $amount: 20);
+            }
+            .card-body{
+                padding: 8px 2px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .input-group{
+                    // display: grid;
+                    // grid-template-columns: repeat(2, 1fr);
+                    display: flex;
+                    flex-direction: column;
+                    padding: 8px 0px;
+                    &:after{
+                        position: relative;
+                        content: "";
+                        width: 10%;
+                        height: 2px;
+                        background-color: $primaryColor;
+                    }
+                    &:hover + :after{
+                        width: 100%;
+                    }
+                    input[type=text],input[type=password]{
+                        border: none;
+                        font-size: 1.2em;
+                        background-color: transparent;
+                        border-bottom: 1px solid gray;
+                        transition: border 0.5s ease-in;
+                        &:focus{
+                            outline: none;
+                            border-bottom: 1px solid $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 img.cover{
     height: 45vh;
@@ -121,4 +193,8 @@ button{
             transform: rotate(-45deg) translateY(-30%);
          }
      }
+}
+
+.progresion{
+    width: 100%;
 }

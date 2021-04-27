@@ -30,11 +30,15 @@ body {
 .navbar .menu-hub {
   margin-left: auto;
   padding: 8px;
+  z-index: auto;
+}
+.navbar .menu-hub.open {
+  z-index: 1024;
 }
 .navbar .menus {
   position: fixed;
-  display: block;
-  background-color: rgba(38, 39, 43, 0.7);
+  display: none;
+  background-color: rgba(38, 39, 43, 0.9);
   backdrop-filter: blur(2px);
   width: 100vw;
   height: 100vh;
@@ -48,13 +52,31 @@ body {
   flex-direction: column;
 }
 .navbar .menus ul.items .item {
-  display: inline;
+  margin: 0.3rem 0rem;
 }
 .navbar .menus ul.items .item a {
-  width: 100%;
-  padding: 8px;
+  display: block;
   background-color: rgba(38, 39, 43, 0.8);
   text-align: center;
+  padding: 0.5rem 1rem;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.navbar .menus ul.items .item a:hover {
+  background-color: #0e5c4c;
+}
+@keyframes slidein {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.navbar .menus.open {
+  display: block;
+  animation: slidein 0.3s;
 }
 
 a {
@@ -78,6 +100,50 @@ a {
 }
 .container .caption .body .btn {
   margin-top: 2rem;
+}
+.container.sign {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.container.sign .card .card-head {
+  border-bottom: 1px solid #26ddb7;
+  padding: 8px 2px;
+  background-color: #565861;
+}
+.container.sign .card .card-body {
+  padding: 8px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container.sign .card .card-body .input-group {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0px;
+}
+.container.sign .card .card-body .input-group:after {
+  position: relative;
+  content: "";
+  width: 10%;
+  height: 2px;
+  background-color: #26ddb7;
+}
+.container.sign .card .card-body .input-group:hover + :after {
+  width: 100%;
+}
+.container.sign .card .card-body .input-group input[type=text], .container.sign .card .card-body .input-group input[type=password] {
+  border: none;
+  font-size: 1.2em;
+  background-color: transparent;
+  border-bottom: 1px solid gray;
+  transition: border 0.5s ease-in;
+}
+.container.sign .card .card-body .input-group input[type=text]:focus, .container.sign .card .card-body .input-group input[type=password]:focus {
+  outline: none;
+  border-bottom: 1px solid #26ddb7;
 }
 
 img.cover {
@@ -119,6 +185,10 @@ button.btn:hover {
 .hambaga.open .bottom {
   transform-origin: 50% 50%;
   transform: rotate(-45deg) translateY(-30%);
+}
+
+.progresion {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
