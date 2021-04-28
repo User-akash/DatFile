@@ -103,49 +103,49 @@ a{
         }
     }
     &.sign{
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        height: 100vh;
-        width: 100vw;
+
+        .cover{
+            img{
+                width: 100%;
+            }
+        }
         .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .card-head{
                 border-bottom: 1px solid $primaryColor;
                 padding: 8px 2px;
                 background-color: lighten($color: $backgroundColor, $amount: 20);
+                // align-self: stretch;
+                width: 80vw;
             }
             .card-body{
                 padding: 8px 2px;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
                 .input-group{
                     // display: grid;
                     // grid-template-columns: repeat(2, 1fr);
                     display: flex;
                     flex-direction: column;
                     padding: 8px 0px;
-                    &:after{
-                        position: relative;
-                        content: "";
-                        width: 10%;
-                        height: 2px;
-                        background-color: $primaryColor;
-                    }
-                    &:hover + :after{
-                        width: 100%;
-                    }
                     input[type=text],input[type=password]{
                         border: none;
                         font-size: 1.2em;
                         background-color: transparent;
                         border-bottom: 1px solid gray;
-                        transition: border 0.5s ease-in;
+                        transition: border 0.3s ease-in;
                         &:focus{
                             outline: none;
                             border-bottom: 1px solid $primaryColor;
                         }
                     }
+                    
+                }
+                a.text-mute{
+                    font-size: 0.82em;
                 }
             }
         }
@@ -197,4 +197,8 @@ button{
 
 .progresion{
     width: 100%;
+}
+
+.brand-logo-text{
+    fill:$primaryColor;
 }

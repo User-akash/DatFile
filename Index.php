@@ -16,22 +16,22 @@
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 448.3 95" enable-background="new 0 0 448.3 95" xml:space="preserve" height="30">
             <g>
-                <g>
-                    <path fill="#23DDB2" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M106.9,10.6L86.8,84H73L59,32.7
+                <g class="brand-logo-text">
+                    <path stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M106.9,10.6L86.8,84H73L59,32.7
                         c-0.6-2.2-0.9-4.6-1.1-7.2h-0.2c-0.2,2.4-0.6,4.8-1.2,7.1L42.5,84H28.5L8,10.6h13.3l13.3,53.7c0.5,2.2,0.9,4.6,1,7.1h0.3
                         c0.1-1.7,0.6-4.1,1.4-7.1l15-53.7h12.5l13.9,54.1c0.5,1.8,0.8,4,1.1,6.5h0.2c0.1-1.7,0.5-4,1.2-6.8l13-53.9H106.9z"/>
-                    <path fill="#23DDB2" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M158.2,84H117V10.6h39.5V21h-27.4v20.8h25.2
+                    <path stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M158.2,84H117V10.6h39.5V21h-27.4v20.8h25.2
                         V52h-25.2v21.7h29V84z"/>
-                    <path fill="#23DDB2" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M171.2,84V10.6h23.3c7.1,0,12.7,1.6,16.9,4.7
+                    <path stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M171.2,84V10.6h23.3c7.1,0,12.7,1.6,16.9,4.7
                         c4.1,3.1,6.2,7.1,6.2,12.1c0,4.2-1.2,7.8-3.5,10.8c-2.4,3.1-5.6,5.3-9.8,6.5V45c5,0.6,9.1,2.4,12.1,5.6c3,3.2,4.5,7.3,4.5,12.3
                         c0,6.3-2.5,11.4-7.4,15.2c-4.9,3.9-11.2,5.8-18.7,5.8H171.2z M183.4,20.4v20.9h7.9c4.2,0,7.5-1,9.9-3c2.4-2,3.6-4.8,3.6-8.5
                         c0-6.3-4.2-9.4-12.6-9.4H183.4z M183.4,51v23.2h10.4c4.5,0,8-1,10.5-3.1c2.5-2.1,3.7-5,3.7-8.7c0-7.6-5.3-11.4-15.8-11.4H183.4z"
                         />
-                    <path fill="#23DDB2" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M299.5,84h-12.2V52.2h-34.5V84h-12.2V10.6
+                    <path stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M299.5,84h-12.2V52.2h-34.5V84h-12.2V10.6
                         h12.2v30.8h34.5V10.6h12.2V84z"/>
-                    <path fill="#23DDB2" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M374,54.3c0,20.6-9.8,30.9-29.3,30.9
+                    <path stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M374,54.3c0,20.6-9.8,30.9-29.3,30.9
                         c-18.7,0-28-9.9-28-29.7V10.6h12.2V53c0,14.4,5.6,21.6,16.8,21.6c10.8,0,16.2-6.9,16.2-20.8V10.6H374V54.3z"/>
-                    <path fill="#23DDB2" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M438.3,21h-21.1v63h-12.2V21h-21V10.6h54.3
+                    <path stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10" d="M438.3,21h-21.1v63h-12.2V21h-21V10.6h54.3
                         V21z"/>
                 </g>
                 <circle fill="#FFFFFF" stroke="#231F20" stroke-miterlimit="10" cx="162.9" cy="47" r="23.6"/>

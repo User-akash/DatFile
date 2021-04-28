@@ -9,22 +9,29 @@
 </head>
 <body>
     <div class="container sign">
+        <div class="cover">
+            <img src="/static/media/img2.png" alt="">
+        </div>
         <div class="card">
             <div class="card-head">
                 <h2>Loging</h2>
             </div>
-            <div class="card-body">
-                <div class="input-group">
-                    <label for="username">User Name</label>
-                    <input type="text" name="username" id="username">
+            <form action="/login.php" method="POST">
+                <div class="card-body">
+                    
+                        <div class="input-group">
+                            <label for="username">User Name</label>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                        <button type="submit" class="btn">Sign In</button>
+                        <a href="#" class="text-mute">Are you Forget your password?</a>
+                    
                 </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
-                </div>
-                <button class="btn">Sign In</button>
-                <a href="#">Are you Forget your password?</a>
-            </div>
+            </form>
         </div>
     </div>
 </body>

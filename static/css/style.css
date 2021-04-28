@@ -63,7 +63,7 @@ body {
   padding-right: 0px;
 }
 .navbar .menus ul.items .item a:hover {
-  background-color: #0e5c4c;
+  background-color: #256d0c;
 }
 @keyframes slidein {
   from {
@@ -101,49 +101,44 @@ a {
 .container .caption .body .btn {
   margin-top: 2rem;
 }
-.container.sign {
-  align-items: center;
+.container.sign .cover img {
+  width: 100%;
+}
+.container.sign .card {
   display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  flex-direction: column;
+  align-items: center;
 }
 .container.sign .card .card-head {
-  border-bottom: 1px solid #26ddb7;
+  border-bottom: 1px solid #5ce72b;
   padding: 8px 2px;
   background-color: #565861;
+  width: 80vw;
 }
 .container.sign .card .card-body {
   padding: 8px 2px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .container.sign .card .card-body .input-group {
   display: flex;
   flex-direction: column;
   padding: 8px 0px;
 }
-.container.sign .card .card-body .input-group:after {
-  position: relative;
-  content: "";
-  width: 10%;
-  height: 2px;
-  background-color: #26ddb7;
-}
-.container.sign .card .card-body .input-group:hover + :after {
-  width: 100%;
-}
 .container.sign .card .card-body .input-group input[type=text], .container.sign .card .card-body .input-group input[type=password] {
   border: none;
   font-size: 1.2em;
   background-color: transparent;
   border-bottom: 1px solid gray;
-  transition: border 0.5s ease-in;
+  transition: border 0.3s ease-in;
 }
 .container.sign .card .card-body .input-group input[type=text]:focus, .container.sign .card .card-body .input-group input[type=password]:focus {
   outline: none;
-  border-bottom: 1px solid #26ddb7;
+  border-bottom: 1px solid #5ce72b;
+}
+.container.sign .card .card-body a.text-mute {
+  font-size: 0.82em;
 }
 
 img.cover {
@@ -160,11 +155,11 @@ button {
   border: none;
 }
 button.btn {
-  background-color: #26ddb7;
+  background-color: #5ce72b;
 }
 button.btn:hover {
   transition: all 0.3s ease-in-out;
-  background-color: #1cb494;
+  background-color: #45c817;
   color: #f3f4f9;
 }
 
@@ -189,6 +184,10 @@ button.btn:hover {
 
 .progresion {
   width: 100%;
+}
+
+.brand-logo-text {
+  fill: #5ce72b;
 }
 
 /*# sourceMappingURL=style.css.map */
