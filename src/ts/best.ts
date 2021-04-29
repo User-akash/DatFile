@@ -1,4 +1,5 @@
-import MagicType from "./magicType";
+import {MagicType} from "./magicType";
+
 class HumbagerMenu{
     private isopen: boolean;
     constructor(private menuIcon: Element, private moreElement?:Array<Element>){

@@ -1,20 +1,11 @@
 {
   "name": "datfile",
   "version": "1.0.0",
-  "description": "Webpage",
-  "main": "index.js",
-  "dependencies": {
-    "bootstrap": "^4.6.0"
-  },
-  "devDependencies": {
-    "babel-loader": "^8.2.2",
-    "typescript": "^4.2.4",
-    "webpack": "^5.31.2"
-  },
+  "description": "Code initializes in security. Everyone Initialize this code.",
+  "private": true,
   "scripts": {
-    "sass-watch": "sass --watch --poll src/scss:static/css",
-    "sass-build": "sass --style=compressed src/scss:static/css",
-    "tsc-watch": "tsc --build ./ --watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"webpack"
   },
   "repository": {
     "type": "git",
@@ -25,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/User-akash/DatFile/issues"
   },
-  "homepage": "https://github.com/User-akash/DatFile#readme"
+  "homepage": "https://github.com/User-akash/DatFile#readme",
+  "devDependencies": {
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
+  }
 }

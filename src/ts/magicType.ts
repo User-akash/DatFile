@@ -3,7 +3,7 @@ interface MagicTypeControls{
     delay:number
 }
 
-class MagicType{
+export class MagicType{
     private spaChar = `!"#$%&'()*+,-:;<=>?@{|}~¡¢£¤¥¦§¼æ֍֎֏`;
     private nextTime = 100;
     private count = 0;
@@ -55,5 +55,3 @@ class MagicType{
         return text;
     }
 }
-
-export default MagicType;
