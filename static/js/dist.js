@@ -12,9 +12,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "GoBar": function() { return /* binding */ GoBar; }
 /* harmony export */ });
+/* harmony import */ var _random__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./random */ "./src/ts/random.ts");
+
 var GoBar = (function () {
     function GoBar() {
         this.resizeHandle = this.resizeHandle.bind(this);
+        this.amount = 30;
+        this.speed = 1;
         var svgns = "http://www.w3.org/2000/svg";
         this.svg = document.createElementNS(svgns, "svg");
         this.gradient = document.createElementNS(svgns, "linearGradient");
@@ -29,6 +33,8 @@ var GoBar = (function () {
         this.svg.setAttribute("viewBox", "0 0 " + this.screenW + " " + this.screenH);
         this.svg.style.position = "fixed";
         this.svg.style.top = "0";
+        this.svg.style.height = this.screenH.toString();
+        this.svg.style.width = this.screenW.toString();
         this.gradient.id = "gradient";
         this.gradient.setAttribute("x1", "0");
         this.gradient.setAttribute("x2", this.screenW.toString());
@@ -47,16 +53,21 @@ var GoBar = (function () {
         this.gradient.appendChild(this.stop2);
         this.gradient.appendChild(this.stop3);
         this.svg.appendChild(this.gradient);
-        document.body.appendChild(this.svg);
-        this.createAnimate();
+        this.dispaly();
     }
     GoBar.prototype.resizeHandle = function (ev) {
         this.screenH = screen.height;
         this.screenW = screen.width;
         this.svg.setAttribute("viewBox", "0 0 " + this.screenW + " " + this.screenH);
     };
-    GoBar.prototype.createAnimate = function () {
+    GoBar.prototype.dispaly = function () {
         var _this = this;
+        if (this.svg.children.length < this.amount) {
+            this.createAnimate();
+        }
+        setTimeout(function () { _this.dispaly(); }, _random__WEBPACK_IMPORTED_MODULE_0__.default.number(0, 10));
+    };
+    GoBar.prototype.createAnimate = function () {
         var direction;
         (function (direction) {
             direction[direction["tb"] = 0] = "tb";
@@ -65,14 +76,14 @@ var GoBar = (function () {
             direction[direction["rl"] = 3] = "rl";
         })(direction || (direction = {}));
         ;
-        var ran = direction.tb;
+        var ran = _random__WEBPACK_IMPORTED_MODULE_0__.default.number(direction.tb, direction.rl);
         var svgns = "http://www.w3.org/2000/svg";
         var posy = 0;
         var posx = 0;
-        if (ran == direction.tb || ran == direction.rl)
-            posy = (Math.random() * this.screenH);
+        if (ran == direction.tb || ran == direction.bt)
+            posx = (_random__WEBPACK_IMPORTED_MODULE_0__.default.number(0, this.screenH));
         else
-            var posx = (Math.random() * this.screenW);
+            var posy = (_random__WEBPACK_IMPORTED_MODULE_0__.default.number(0, this.screenW));
         var rectagle = document.createElementNS(svgns, "rect");
         var group = document.createElementNS(svgns, "g");
         group.style.transform = "translate(" + posx + "px, " + posy + "px)";
@@ -81,23 +92,22 @@ var GoBar = (function () {
         rectagle.setAttribute("fill", "url(#gradient)");
         switch (ran) {
             case direction.tb:
-                rectagle.style.animation = "moveYn 5s linear";
+                rectagle.style.animation = "moveYn " + this.speed + "s linear";
                 break;
             case direction.bt:
-                rectagle.style.animation = "moveYp 5s linear";
+                rectagle.style.animation = "moveYp " + this.speed + "s linear";
                 break;
             case direction.lr:
-                rectagle.style.animation = "moveXp 5s linear";
+                rectagle.style.animation = "moveXn " + this.speed + "s linear";
                 break;
             case direction.rl:
-                rectagle.style.animation = "moveXn 5s linear";
+                rectagle.style.animation = "moveXp " + this.speed + "s linear";
                 break;
             default:
                 break;
         }
         rectagle.onanimationend = function (en) {
             group.remove();
-            _this.createAnimate();
         };
         group.appendChild(rectagle);
         this.svg.appendChild(group);
@@ -220,6 +230,32 @@ var MagicType = (function () {
 
 
 
+/***/ }),
+
+/***/ "./src/ts/random.ts":
+/*!**************************!*\
+  !*** ./src/ts/random.ts ***!
+  \**************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var Random = (function () {
+    function Random() {
+    }
+    Random.number = function (min, max, resulation) {
+        if (min === void 0) { min = 0; }
+        if (max === void 0) { max = 100; }
+        if (resulation === void 0) { resulation = 1; }
+        var t = Math.random() * (max - min) + min;
+        var num = Math.round(t / resulation) * resulation;
+        num = Math.round(num * 10000000000) / 10000000000;
+        return num;
+    };
+    return Random;
+}());
+/* harmony default export */ __webpack_exports__["default"] = (Random);
+
+
 /***/ })
 
 /******/ 	});
@@ -301,7 +337,9 @@ var text = document.querySelector(".spacial h3");
 if (text) {
     new _magicType__WEBPACK_IMPORTED_MODULE_1__.MagicType(text, { delay: 5000, texts: ["Shadhin is my name", "I am work as developer", "this Type Script "] });
 }
-new _goBar__WEBPACK_IMPORTED_MODULE_2__.GoBar();
+var gbar = new _goBar__WEBPACK_IMPORTED_MODULE_2__.GoBar();
+var x = document.querySelector(".bgound");
+x === null || x === void 0 ? void 0 : x.appendChild(gbar.svg);
 
 }();
 /******/ })()

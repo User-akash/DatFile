@@ -224,20 +224,20 @@ button{
 
 @keyframes moveYp{
     0%{
-        transform: translateY(100vh) rotate(90deg);
+        transform: translateY(100vw) rotate(90deg);
     }
     100%{
-        transform: translateY(-100vh) rotate(90deg);
+        transform: translateY(-100vw) rotate(90deg);
     }
 }
 
 @keyframes moveYn{
     0%{
         
-        transform: translateY(0vw) rotate(180deg);
+        transform: translateY(0vw) rotate(-90deg);
     }
     100%{
-        transform: translateY(200vw) rotate(180deg);
+        transform: translateY(200vw) rotate(-90deg);
     }
 }
 
@@ -252,4 +252,8 @@ button{
 
 #err{
     animation: moveXn 0.5s linear;
+}
+
+.bgound{
+    pointer-events: none;
 }

@@ -16,4 +16,6 @@ if(text)
     new MagicType(text, {delay:5000, texts:["Shadhin is my name", "I am work as developer", "this Type Script "]});
 }
 
-new GoBar();
+var gbar =new GoBar();
+var x = document.querySelector<HTMLElement>(".bgound");
+x?.appendChild(gbar.svg);
