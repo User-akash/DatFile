@@ -79,7 +79,7 @@
             </div>
         </div>
     </div>
-    <div class="bgound"></div>
+    <div class="bgound" ></div>
     <script src="static/js/dist.js"></script>
 </body>
 </html>
