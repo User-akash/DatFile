@@ -86,11 +86,10 @@ a {
 
 .container .caption {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 8px;
   height: 100vh;
-  align-items: stretch;
+  flex-direction: column;
+  align-items: center;
 }
 .container .caption .body {
   display: flex;
@@ -188,6 +187,42 @@ button.btn:hover {
 
 .brand-logo-text {
   fill: #5ce72b;
+}
+
+@keyframes moveXp {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+@keyframes moveXn {
+  0% {
+    transform: translateX(0vw) rotate(180deg);
+  }
+  100% {
+    transform: translateX(200vw) rotate(180deg);
+  }
+}
+@keyframes moveYp {
+  0% {
+    transform: translateY(100vh) rotate(90deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(90deg);
+  }
+}
+@keyframes moveYn {
+  0% {
+    transform: translateY(0vw) rotate(180deg);
+  }
+  100% {
+    transform: translateY(200vw) rotate(180deg);
+  }
+}
+#err {
+  animation: moveXn 0.5s linear;
 }
 
 /*# sourceMappingURL=style.css.map */

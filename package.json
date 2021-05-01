@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"webpack"
+    "webpack-watch":"webpack --watch",
+    "sass-watch":"sass src/scss:static/css --watch"
   },
   "repository": {
     "type": "git",

@@ -68,17 +68,29 @@
             <div class="cover">
                 <img src="/static/media/img1.png" alt="shadhin" class="cover">
             </div>
+            <div class="body">
+                <h2>The Modern City Need Action About Bussness</h2>
+                <a class="btn" href="/Singin.php">Sign Up</a>
+            </div>
             <div class="progresion">
                 <div class="spacial">
                     <h3>what the hell are doing?</h3>
                 </div>
             </div>
-            <div class="body">
-                <h2>The Modern City Need Action About Bussness</h2>
-                <a class="btn" href="/Singin.php">Sign Up</a>
-            </div>
         </div>
     </div>
-    <script src="static/js/tsc.js"></script>
+    <div class="div">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 384 718" xml:space="preserve">
+            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="9.0947" y1="197" x2="680.0947" y2="197">
+                <stop  offset="0" style="stop-color:currentColor"/>
+                <stop  offset="1.804063e-02" style="stop-color:currentColor"/>
+                <stop  offset="1" style="stop-color:currentColor;stop-opacity:0"/>
+            </linearGradient>
+            <rect x="9.1" y="192" fill="url(#SVGID_1_)" stroke="none" stroke-miterlimit="10" width="671" height="10"/>
+        </svg>
+
+    </div>
+    <script src="static/js/dist.js"></script>
 </body>
 </html>

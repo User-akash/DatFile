@@ -1,15 +1,21 @@
 const path = require("path");
 module.exports ={
     entry: "./src/ts/index.ts",
-    target: ['web', 'es5'],
+    target: 'es5',
+    devtool: "source-map",
+    mode:"development",
     module: {
         rules:[
             {
-                test:/\.tsx?$/,
+                test:/\.ts$/,
                 use:"ts-loader",
-                include: [path.resolve(__dirname, "src/ts")]
+                exclude: /node_modules/
+                
             }
         ]
+    },
+    resolve:{
+        extensions: [".tsx", ".ts", ".js"]
     },
     output:{
         filename:"dist.js",

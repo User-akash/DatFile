@@ -87,11 +87,10 @@ a{
 .container{
     .caption{
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         padding: 8px;
         height: 100vh;
-        align-items: stretch;
+        flex-direction: column;
+        align-items: center;
         .body{
             display: flex;
             align-items: center;
@@ -102,6 +101,7 @@ a{
             }
         }
     }
+
     &.sign{
 
         .cover{
@@ -201,4 +201,55 @@ button{
 
 .brand-logo-text{
     fill:$primaryColor;
+}
+
+
+@keyframes moveXp{
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes moveXn{
+    0%{
+        transform: translateX(0vw) rotate(180deg);
+    }
+    100%{
+        transform: translateX(200vw) rotate(180deg);
+    }
+}
+
+@keyframes moveYp{
+    0%{
+        transform: translateY(100vh) rotate(90deg);
+    }
+    100%{
+        transform: translateY(-100vh) rotate(90deg);
+    }
+}
+
+@keyframes moveYn{
+    0%{
+        
+        transform: translateY(0vw) rotate(180deg);
+    }
+    100%{
+        transform: translateY(200vw) rotate(180deg);
+    }
+}
+
+// @keyframes moveXp{
+//     0%{
+//         transform:rotate(-90deg) translateX(100vh);
+//     }
+//     100%{
+//         transform:rotate(-90deg) translateX(-100vh);
+//     }
+// }
+
+#err{
+    animation: moveXn 0.5s linear;
 }
