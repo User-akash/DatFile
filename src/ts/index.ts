@@ -1,6 +1,9 @@
 import { HumbagerMenu } from "./humbagerMenu";
 import { MagicType } from "./magicType";
 import {GoBar} from "./goBar";
+import "../scss/style.scss";
+import "jquery";
+import "bootstrap";
 
 var menu = document.querySelector(".hambaga");
 var menuHub = document.querySelectorAll(".menu-hub");

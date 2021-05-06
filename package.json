@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack-watch":"webpack --watch",
-    "sass-watch":"sass src/scss:static/css --watch"
+    "webpack-watch": "webpack --watch",
+    "sass-watch": "sass src/scss:static/css --watch"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,15 @@
   },
   "homepage": "https://github.com/User-akash/DatFile#readme",
   "devDependencies": {
+    "bootstrap": "^4.6.0",
+    "css-loader": "^5.2.4",
+    "css-minimizer-webpack-plugin": "^2.0.0",
+    "jquery": "^3.6.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "popper.js": "^1.16.1",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
     "ts-loader": "^9.1.1",
     "typescript": "^4.2.4",
     "webpack": "^5.31.2",
