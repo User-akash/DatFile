@@ -1,0 +1,38 @@
+.humbarger-menu{
+    &.open{
+        svg{
+            path{
+                transform-origin: 32px 32px;
+                transform: rotate(90deg);
+                &:nth-child(1){
+                    d:path("M54 32 32 10");
+                }
+                &:nth-child(3)
+                {
+                    d:path("M32 10 32 54");
+                }
+                &:nth-child(2){
+                    d:path("M32 10 10 32");
+                }
+            }
+        }
+    }
+    svg{
+        width: 1.8rem;
+        path{
+            &:nth-child(1){
+                d:path("M3 10 61 10");
+            }
+            &:nth-child(2){
+                d:path("M3 32 61 32");
+            }
+            &:nth-child(3){
+                d:path("M3 54 61 54");
+            }
+            stroke: currentColor;
+            stroke-width: 3px;
+            stroke-linecap: round;
+            transition: all 0.3s ease;
+        }
+    }
+}

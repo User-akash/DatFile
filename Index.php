@@ -41,7 +41,7 @@
                 </g>
                 </svg>
         </a>
-        <button class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+        <button class="btn humbarger-menu text-primary"></button>
     </nav>
     <div class="container">
         

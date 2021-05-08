@@ -15347,6 +15347,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/ts/humbagerMenu.scss":
+/*!**********************************!*\
+  !*** ./src/ts/humbagerMenu.scss ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
@@ -18104,14 +18117,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HumbagerMenu": function() { return /* binding */ HumbagerMenu; }
 /* harmony export */ });
+/* harmony import */ var _humbagerMenu_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./humbagerMenu.scss */ "./src/ts/humbagerMenu.scss");
+
 var HumbagerMenu = (function () {
     function HumbagerMenu(menuIcon, moreElement) {
+        var _this = this;
         this.menuIcon = menuIcon;
         this.moreElement = moreElement;
+        this.init();
         this.hadleClick = this.hadleClick.bind(this);
-        this.isopen = this.menuIcon.classList.contains("open");
-        this.menuIcon.addEventListener("click", this.hadleClick);
+        this.isopen = window.location.hash == "#menus-open" ? true : false;
+        if (this.isopen) {
+            this.open();
+        }
+        window.addEventListener("hashchange", function (e) {
+            if (window.location.hash == "#menus-open") {
+                _this.open();
+            }
+            else {
+                _this.close();
+            }
+        });
+        this.menuIcon.addEventListener("click", function () {
+            if (_this.isopen)
+                window.location.hash = "";
+            else
+                window.location.hash = "#menus-open";
+        });
     }
+    HumbagerMenu.prototype.init = function () {
+        var svgns = "http://www.w3.org/2000/svg";
+        var svg = document.createElementNS(svgns, "svg");
+        svg.setAttribute("viewBox", "0 0 64 64");
+        var line = document.createElementNS(svgns, "path");
+        var line2 = document.createElementNS(svgns, "path");
+        var line3 = document.createElementNS(svgns, "path");
+        svg.appendChild(line);
+        svg.appendChild(line2);
+        svg.appendChild(line3);
+        this.menuIcon.appendChild(svg);
+    };
     HumbagerMenu.prototype.hadleClick = function () {
         if (this.isopen) {
             this.close();
@@ -18127,6 +18172,9 @@ var HumbagerMenu = (function () {
             element.classList.toggle("open");
         });
         this.isopen = true;
+    };
+    HumbagerMenu.prototype.cleanHash = function () {
+        window;
     };
     HumbagerMenu.prototype.close = function () {
         var _a;
@@ -18337,19 +18385,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var menu = document.querySelector(".hambaga");
+var menu = document.querySelector(".humbarger-menu");
 var menuHub = document.querySelectorAll(".menu-hub");
 var menus = document.querySelectorAll(".menus");
 if (menu) {
-    new _humbagerMenu__WEBPACK_IMPORTED_MODULE_0__.HumbagerMenu(menu, [menus[0], menuHub[0]]);
+    new _humbagerMenu__WEBPACK_IMPORTED_MODULE_0__.HumbagerMenu(menu);
 }
 var text = document.querySelector(".spacial h3");
 if (text) {
     new _magicType__WEBPACK_IMPORTED_MODULE_1__.MagicType(text, { delay: 5000, texts: ["Shadhin is my name", "I am work as developer", "this Type Script "] });
 }
-var gbar = new _goBar__WEBPACK_IMPORTED_MODULE_2__.GoBar();
 var x = document.querySelector(".bgound");
-x === null || x === void 0 ? void 0 : x.appendChild(gbar.svg);
+if (x) {
+    var gbar = new _goBar__WEBPACK_IMPORTED_MODULE_2__.GoBar();
+    x === null || x === void 0 ? void 0 : x.appendChild(gbar.svg);
+}
 
 }();
 /******/ })()
